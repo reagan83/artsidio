@@ -1,0 +1,117 @@
+<!-- BODY -->
+<div id="background-stretch">
+
+	<%= image_tag("ggpresidio.jpg", :id => "background_image", :alt => "presidio art - golden gate bridge", :class => "bgwidth", :style => "display: inline") %>
+ 
+</div>
+
+<!-- CONTENT -->
+<div id="maincontent">
+  <div class="site_body">
+    <div class="container Center">
+      <div class="wide_wrapper" id="header">
+        <!-- HORIZONTAL BREAK -->
+        <div class="linebreak"></div>
+        <div id="logo_tagline">
+
+          <!-- HEADER-->
+          <div id="name_or_logo">
+            
+            <h1 class="logo" data-mercury="text" data-content-name="title">
+              presidio art  
+            </h1>
+            
+            </div>
+
+            <!-- TAGLINE -->
+            
+              <div class="title" data-mercury="text" data-content-name="tagline">Beautifully curated SF Presidio photos in your home every month.</div>
+            
+        </div>
+      </div>
+
+      <div class="wide_wrapper" id="content">
+        <!-- DESCRIPTION -->
+        <p id="notice"><%= notice %></p>
+        <div id="description" data-mercury="wysihat" data-content-name="description">
+          
+          <h2>Signup for the limited first batch</h2><h2>February 2014.</h2>
+        
+        </div> 
+
+        <!-- FORM -->
+        <div id="form">
+
+<%= render 'form' %>
+
+
+          <!-- THANK YOU RESPONSE -->
+                    <div class="thanks" id="kol_thank_you"></div>
+          <script type="kol/template" id="__response">
+          
+          <div id="subscribe">
+            <div class="common_thank_you_message">
+              {{content.thank_you_message}}
+            </div>
+            <div class="kol_social_url">
+              <p id="social_url" class="social_url_box">{{social_url}}</p>
+              <span class="tooltip">Copy</span>
+            </div>
+            <p class="share_links">
+              <span class="share_text"> SHARE ON</span>
+              <a href="#" class='share_button' onclick="window.open('https://www.facebook.com/sharer.php?u={{social_url | escape}}', '_blank', 'width=800,height=400')">
+                <img src="{% asset_path images/icons/social/facebook-square.png %}" height="32" width="32" />
+              </a>
+              <a href="#" class='share_button' onclick="window.open('https://twitter.com/share?url={{social_url | escape}}&text={{content.twitter_share_text | cgi_escape }}', '_blank', 'width=800,height=300')">
+                <img src="{% asset_path images/icons/social/twitter-square.png %}" height="32" width="32" />
+              </a>
+              <a href="#" class='share_button' onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url={{social_url | escape}}&title={{content.title | escape}}', '_blank', 'width=800,height=400')">
+                <img src="{% asset_path images/icons/social/linkedin-square.png %}" height="32" width="32" />
+              </a>
+              <a href="#" class='share_button' onclick="window.open('https://plusone.google.com/_/+1/confirm?hl=en&url={{social_url | escape}}&title={{content.title | escape}}', '_blank', 'width=800,height=400')">
+                <img src="{% asset_path images/icons/social/googleplus-square.png %}" height="32" width="32" />
+              </a>
+              <a class='share_button' href="mailto:?subject={{content.title | escape}}&body={{social_url | escape}}"><img src="{% asset_path images/icons/social/email-square.png %}" alt="Email Share" height="32" width="32" /></a>  
+            </p>
+          </div>
+          
+          </script>
+
+          
+            <div id="post-form-content" class="description " data-mercury="wysihat" data-content-name="after_form">
+              
+              
+              We respect your email address privacy.
+            
+            </div>
+          
+          <div class="clear"></div>
+          <div id="kol_fade"></div>
+        </div>
+    
+      <!-- HORIZONTAL BREAK -->
+      <div class="linebreak"></div>
+    </div>
+    <div class="clear"></div>
+
+    <!-- FOOTER -->
+    <div class="wide_wrapper" id="footer">
+      <p class="right" id="copyright"> <span data-mercury="wysihat" data-content-name="copyright">© 2013</span>
+         <a id="privacy_link" href="http://testlandingpage-3.kickoffpages.com/privacy"> Privacy </a> 
+       </p>
+      <p class="social_links">
+        
+          <a class="email" href="mailto:reagan.williams@gmail.com">
+            <span class="colorslide"></span>
+            <i class="icon-envelope"></i>
+          </a>
+        
+      </p>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+
+
+
+<%= link_to 'Back', interests_path %>

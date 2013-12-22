@@ -1,0 +1,24 @@
+
+          
+<%= form_for(@interest, html: {class: "signup_form", id: "signup_form"}) do |f| %>
+  <% if @interest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@interest.errors.count, "error") %> prohibited this interest from being saved:</h2>
+
+      <ul>
+      <% @interest.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<div class="row">
+    <%= f.text_field :email, class: "txt inputs required", placeholder: "Email address" %>
+    <%= f.submit class: "submit button", value: "Signup" %>
+</div>
+
+<div class="clear"></div>
+
+<% end %>
