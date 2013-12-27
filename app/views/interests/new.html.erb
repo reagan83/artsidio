@@ -53,36 +53,11 @@
             <div class="common_thank_you_message">
               {{content.thank_you_message}}
             </div>
-            <div class="kol_social_url">
-              <p id="social_url" class="social_url_box">{{social_url}}</p>
-              <span class="tooltip">Copy</span>
-            </div>
-            <p class="share_links">
-              <span class="share_text"> SHARE ON</span>
-              <a href="#" class='share_button' onclick="window.open('https://www.facebook.com/sharer.php?u={{social_url | escape}}', '_blank', 'width=800,height=400')">
-                <img src="{% asset_path images/icons/social/facebook-square.png %}" height="32" width="32" />
-              </a>
-              <a href="#" class='share_button' onclick="window.open('https://twitter.com/share?url={{social_url | escape}}&text={{content.twitter_share_text | cgi_escape }}', '_blank', 'width=800,height=300')">
-                <img src="{% asset_path images/icons/social/twitter-square.png %}" height="32" width="32" />
-              </a>
-              <a href="#" class='share_button' onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url={{social_url | escape}}&title={{content.title | escape}}', '_blank', 'width=800,height=400')">
-                <img src="{% asset_path images/icons/social/linkedin-square.png %}" height="32" width="32" />
-              </a>
-              <a href="#" class='share_button' onclick="window.open('https://plusone.google.com/_/+1/confirm?hl=en&url={{social_url | escape}}&title={{content.title | escape}}', '_blank', 'width=800,height=400')">
-                <img src="{% asset_path images/icons/social/googleplus-square.png %}" height="32" width="32" />
-              </a>
-              <a class='share_button' href="mailto:?subject={{content.title | escape}}&body={{social_url | escape}}"><img src="{% asset_path images/icons/social/email-square.png %}" alt="Email Share" height="32" width="32" /></a>  
-            </p>
           </div>
           
-          </script>
-
           
             <div id="post-form-content" class="description " data-mercury="wysihat" data-content-name="after_form">
-              
-              
               We respect your email address privacy.
-            
             </div>
           
           <div class="clear"></div>
